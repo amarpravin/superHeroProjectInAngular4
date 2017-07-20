@@ -1,0 +1,30 @@
+<div id="wrapper">
+
+    <div id="logo">
+        <h1>Photo <span>Gallery</span></h1>
+    </div>
+
+    <div id="gallery">
+
+
+        <!-- start -->
+
+        <div id="output">
+            <img src={{selectedImage}} alt="" />
+        </div>
+
+        <div id="captions">
+            <span class="line">{{selectedName}}</span>
+            <br class="clear" />
+            <span class="line2">{{superpower}}</span>
+        </div>
+
+        <ul class="thumbnails">
+            <li *ngFor="let superhero of superheros" class="first">
+                <img src={{superhero.picture}} title={{superhero.superpower}}
+                    alt="" width="100" height="75"  (click)="onImageClick(superhero)"/></li>
+        </ul>
+
+        <br class="clear" />
+    </div>
+</div>
