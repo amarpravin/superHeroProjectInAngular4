@@ -13,14 +13,14 @@ export class PhotogalaryComponent implements OnInit {
     superpower = '';
     superheros: Superhero[] = [];
 
-    constructor(private superHeroService: SuperHeroService) {
-        
-    }
+    constructor(private superHeroService: SuperHeroService) { }
 
     ngOnInit(): void {
-        this.superHeroService.getSuperheroes()
-            .then(superheros => this.superheros = superheros);
-            
+        this.superHeroService.getSuperheroes().then(
+            superheros => {
+                this.superheros = superheros;
+            }
+        )
     }
 
     onImageClick(superhero): void {

@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { provideRoutes } from '@angular/router';
+import { HttpModule } from '@angular/http'; 
 
 import { AppComponent } from './app.component';
 
@@ -14,6 +15,7 @@ import { SuperHeroService } from './superhero.service';
     PhotogalaryComponent
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     AppRoutingModule
   ],
